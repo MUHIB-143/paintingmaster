@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Painting Master - Sydney's leading professional painters. Quality residential & commercial painting services in NSW. Free quotes available.">
+    <meta name="keywords" content="painting, painters, Sydney, NSW, residential painting, commercial painting, interior painting, exterior painting, house painting, professional painters, color consultation">
+    <meta name="author" content="Painting Master">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://paintingmaster.com.au/">
+    <meta property="og:title" content="Painting Master | Professional Painters Sydney NSW">
+    <meta property="og:description" content="Sydney's leading professional painters. Quality residential & commercial painting services. Free quotes available.">
+    <meta property="og:image" content="assets/logo.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://paintingmaster.com.au/">
+    <meta property="twitter:title" content="Painting Master | Professional Painters Sydney NSW">
+    <meta property="twitter:description" content="Sydney's leading professional painters. Quality residential & commercial painting services.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://paintingmaster.com.au/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+    <link rel="apple-touch-icon" href="logo.jpg">
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Preload critical images -->
+    <link rel="preload" as="image" href="assets/home_img.jpg">
+    <link rel="preload" as="image" href="logo.jpg">
+    
+    <title>Painting Master | Professional Painters Sydney NSW</title>
+    
+    <style>
+        /* Critical CSS - Above the fold */
+        :root {
+            --primary: #FF6B35;
+            --primary-dark: #E85A24;
+            --secondary: #2E4057;
+            --accent: #048A81;
+            --accent-light: #06D6A0;
+            --dark: #0D0D0D;
+            --light: #F8F9FA;
+            --white: #FFFFFF;
+            --gray: #6C757D;
+        }
+        
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+        
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--white);
+            overflow-x: hidden;
+        }
+        
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--dark);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-wrapper">
+            <div class="loader-paint">
+                <div class="paint-drops">
+                    <div class="drop drop-1"></div>
+                    <div class="drop drop-2"></div>
+                    <div class="drop drop-3"></div>
+                </div>
+                <div class="bucket">
+                    <div class="bucket-body">
+                        <div class="paint-fill"></div>
+                    </div>
+                    <div class="bucket-handle"></div>
+                </div>
+            </div>
+            <span class="loader-text">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <!-- Paint Bucket -->
+        <div class="bg-object bucket-3d">
+            <div class="bucket-main">
+                <div class="bucket-rim"></div>
+                <div class="bucket-body">
+                    <div class="bucket-paint"></div>
+                </div>
+                <div class="bucket-handle"></div>
+            </div>
+            <div class="bucket-shadow"></div>
+        </div>
+        
+        <!-- 3D Brush -->
+        <div class="bg-object brush-3d-1">
+            <div class="brush-handle"></div>
+            <div class="brush-metal"></div>
+            <div class="brush-bristles"></div>
+        </div>
+        
+        <div class="bg-object brush-3d-2">
+            <div class="brush-handle"></div>
+            <div class="brush-metal"></div>
+            <div class="brush-bristles"></div>
+        </div>
+        
+        <!-- Paint Drops -->
+        <div class="bg-object drop-3d-1">
+            <div class="drop-shape"></div>
+            <div class="drop-shine"></div>
+        </div>
+        <div class="bg-object drop-3d-2">
+            <div class="drop-shape"></div>
+            <div class="drop-shine"></div>
+        </div>
+        <div class="bg-object drop-3d-3">
+            <div class="drop-shape"></div>
+            <div class="drop-shine"></div>
+        </div>
+        <div class="bg-object drop-3d-4">
+            <div class="drop-shape"></div>
+            <div class="drop-shine"></div>
+        </div>
+        <div class="bg-object drop-3d-5">
+            <div class="drop-shape"></div>
+            <div class="drop-shine"></div>
+        </div>
+        
+        <!-- Paint Strokes -->
+        <div class="bg-object stroke-ring-1"></div>
+        <div class="bg-object stroke-ring-2"></div>
+        <div class="bg-object stroke-ring-3"></div>
+        
+        <!-- Floating Particles -->
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+        <div class="particle particle-5"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#" class="logo" aria-label="Painting Master Home">
+                <div class="logo-icon">
+                    <i class="fas fa-paint-roller" aria-hidden="true"></i>
+                </div>
+                <span class="logo-text">Painting <span class="highlight">Master</span></span>
+            </a>
+            
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu" role="menu">
+                <li role="menuitem"><a href="#home" class="nav-link active">Home</a></li>
+                <li role="menuitem"><a href="#about" class="nav-link">About</a></li>
+                <li role="menuitem"><a href="#services" class="nav-link">Services</a></li>
+                <li role="menuitem"><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li role="menuitem"><a href="#testimonials" class="nav-link">Reviews</a></li>
+                <li role="menuitem"><a href="#contact" class="btn-nav">Get Quote</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home" aria-label="Hero section">
+        <div class="hero-bg">
+            <img src="assets/home_img.jpg" alt="Professionally painted modern home exterior" class="hero-bg-img" loading="eager">
+            <div class="hero-overlay"></div>
+            <div class="hero-pattern"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">Professional</span>
+                <span class="title-line gradient-text">Painting Services</span>
+                <span class="title-line">In Sydney</span>
+            </h1>
+            
+            <p class="hero-subtitle">
+                Transform your property with expert painters. Quality residential & commercial 
+                painting across Sydney. Free quotes, competitive prices.
+            </p>
+            
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">
+                    <span>Get Free Quote</span>
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <a href="#gallery" class="btn btn-secondary">
+                    <i class="fas fa-play" aria-hidden="true"></i>
+                    <span>View Our Work</span>
+                </a>
+            </div>
+            
+            <div class="hero-stats" role="list" aria-label="Company statistics">
+                <div class="stat-item" role="listitem">
+                    <div class="stat-icon"><i class="fas fa-home" aria-hidden="true"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-number" data-target="500">0</span>
+                        <span class="stat-label">Projects Done</span>
+                    </div>
+                </div>
+                <div class="stat-divider" aria-hidden="true"></div>
+                <div class="stat-item" role="listitem">
+                    <div class="stat-icon"><i class="fas fa-calendar-check" aria-hidden="true"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-number" data-target="15">0</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                </div>
+                <div class="stat-divider" aria-hidden="true"></div>
+                <div class="stat-item" role="listitem">
+                    <div class="stat-icon"><i class="fas fa-star" aria-hidden="true"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-number" data-target="100">0</span>
+                        <span class="stat-label">% Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <a href="#about" class="scroll-indicator" aria-label="Scroll to about section">
+            <span>Scroll Down</span>
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </div>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about" aria-labelledby="about-heading">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">About Us</span>
+                <h2 id="about-heading" class="section-title">Professional Painting <span class="highlight">Services</span></h2>
+                <p class="section-subtitle">With over 15 years of experience, Painting Master has become one of the most recommended professional painters in NSW</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image scroll-reveal-left">
+                    <div class="image-frame">
+                        <img src="assets/image.jpg" alt="Painting Master team at work" loading="lazy">
+                        <div class="image-accent"></div>
+                    </div>
+                    <div class="experience-badge">
+                        <span class="exp-number">15+</span>
+                        <span class="exp-text">Years<br>Experience</span>
+                    </div>
+                </div>
+                
+                <div class="about-features scroll-reveal-right">
+                    <h3>Why Choose Painting Master?</h3>
+                    
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-check" aria-hidden="true"></i></div>
+                            <div class="feature-text">
+                                <h4>Free, No-Obligation Quotes</h4>
+                                <p>Get a detailed quote with no hidden costs</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-check" aria-hidden="true"></i></div>
+                            <div class="feature-text">
+                                <h4>Competitive Pricing</h4>
+                                <p>Quality service at fair, transparent prices</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-check" aria-hidden="true"></i></div>
+                            <div class="feature-text">
+                                <h4>Professional Team</h4>
+                                <p>Experienced, licensed, and insured painters</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-check" aria-hidden="true"></i></div>
+                            <div class="feature-text">
+                                <h4>Quality Materials</h4>
+                                <p>Only premium paints and materials used</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services" aria-labelledby="services-heading">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">Our Services</span>
+                <h2 id="services-heading" class="section-title">What We <span class="highlight">Offer</span></h2>
+                <p class="section-subtitle">From residential homes to commercial complexes, we deliver exceptional results every time</p>
+            </div>
+            
+            <div class="services-grid">
+                <article class="service-card scroll-reveal">
+                    <div class="service-image">
+                        <img src="assets/service_img1.jpg" alt="Interior house painting service" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon"><i class="fas fa-paint-roller" aria-hidden="true"></i></div>
+                        <h3>Interior Painting</h3>
+                        <p>Transform your interior spaces with premium paint finishes and professional application.</p>
+                        <a href="#contact" class="service-link">Get Quote <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </article>
+                
+                <article class="service-card scroll-reveal">
+                    <div class="service-image">
+                        <img src="assets/service_img2.jpg" alt="Exterior house painting service" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon"><i class="fas fa-home" aria-hidden="true"></i></div>
+                        <h3>Exterior Painting</h3>
+                        <p>Protect and beautify your home's exterior with weather-resistant, durable finishes.</p>
+                        <a href="#contact" class="service-link">Get Quote <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </article>
+                
+                <article class="service-card scroll-reveal">
+                    <div class="service-image">
+                        <img src="assets/service_img3.jpg" alt="Commercial building painting" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon"><i class="fas fa-building" aria-hidden="true"></i></div>
+                        <h3>Commercial Painting</h3>
+                        <p>Professional painting for offices, shops, and commercial properties.</p>
+                        <a href="#contact" class="service-link">Get Quote <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </article>
+                
+                <article class="service-card scroll-reveal">
+                    <div class="service-image">
+                        <img src="assets/image2.jpg" alt="Color consultation service" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon"><i class="fas fa-palette" aria-hidden="true"></i></div>
+                        <h3>Colour Consultation</h3>
+                        <p>Expert colour advice to choose the perfect palette for your space.</p>
+                        <a href="#contact" class="service-link">Get Quote <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </article>
+                
+                <article class="service-card scroll-reveal">
+                    <div class="service-image">
+                        <img src="assets/service_img4.jpg" alt="Surface preparation painting" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon"><i class="fas fa-tools" aria-hidden="true"></i></div>
+                        <h3>Surface Preparation</h3>
+                        <p>Proper surface prep including filling, sanding, and priming for perfect finish.</p>
+                        <a href="#contact" class="service-link">Get Quote <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </article>
+                
+                <article class="service-card scroll-reveal">
+                    <div class="service-image">
+                        <img src="assets/image3.jpg" alt="Repairs and maintenance service" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon"><i class="fas fa-wrench" aria-hidden="true"></i></div>
+                        <h3>Repairs & Maintenance</h3>
+                        <p>Quality touch-ups and repairs to keep your property looking pristine.</p>
+                        <a href="#contact" class="service-link">Get Quote <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery" aria-labelledby="gallery-heading">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">Our Portfolio</span>
+                <h2 id="gallery-heading" class="section-title">Recent <span class="highlight">Projects</span></h2>
+                <p class="section-subtitle">Take a look at some of our recent painting projects across Sydney</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <article class="gallery-item item-1">
+                    <img src="assets/gallery_img1.jpg" alt="Modern home exterior repaint project" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <span class="project-category">Residential</span>
+                            <h4>Modern Home</h4>
+                            <p>Exterior Repaint</p>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="gallery-item item-2">
+                    <img src="assets/gallery_img2.jpg" alt="Luxury villa interior and exterior painting" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <span class="project-category">Residential</span>
+                            <h4>Luxury Villa</h4>
+                            <p>Interior & Exterior</p>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="gallery-item item-3">
+                    <img src="assets/gallery_img3.jpg" alt="Commercial office interior painting" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <span class="project-category">Commercial</span>
+                            <h4>Office Space</h4>
+                            <p>Full Interior</p>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="gallery-item item-4">
+                    <img src="assets/gallery_img4.jpg" alt="Heritage home restoration painting" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <span class="project-category">Heritage</span>
+                            <h4>Heritage Home</h4>
+                            <p>Restoration Paint</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="gallery-cta">
+                <a href="#contact" class="btn btn-primary">Start Your Project <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials" aria-labelledby="testimonials-heading">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">Testimonials</span>
+                <h2 id="testimonials-heading" class="section-title">What Clients <span class="highlight">Say</span></h2>
+            </div>
+            
+            <div class="testimonials-wrapper">
+                <div class="testimonial-track">
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left" aria-hidden="true"></i></div>
+                        <p class="testimonial-text">"Painting Master transformed our home! The team was professional, punctual, and the finish is impeccable. Highly recommended for any painting needs in NSW."</p>
+                        <div class="testimonial-author">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23FF6B35'/%3E%3Ctext x='50' y='50' text-anchor='middle' dy='.3em' fill='white' font-size='40'%3EM%3C/text%3E%3C/svg%3E" alt="Michael Thompson" loading="lazy">
+                            <div class="author-info">
+                                <h4>Michael Thompson</h4>
+                                <p>Homeowner, Sydney</p>
+                            </div>
+                            <div class="stars" aria-label="5 out of 5 stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left" aria-hidden="true"></i></div>
+                        <p class="testimonial-text">"We've used Painting Master for multiple commercial properties. Their attention to detail and competitive pricing make them our go-to painters in Sydney."</p>
+                        <div class="testimonial-author">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23048A81'/%3E%3Ctext x='50' y='50' text-anchor='middle' dy='.3em' fill='white' font-size='40'%3ES%3C/text%3E%3C/svg%3E" alt="Sarah Williams" loading="lazy">
+                            <div class="author-info">
+                                <h4>Sarah Williams</h4>
+                                <p>Property Manager</p>
+                            </div>
+                            <div class="stars" aria-label="5 out of 5 stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left" aria-hidden="true"></i></div>
+                        <p class="testimonial-text">"Excellent service from start to finish. The colour consultation helped us choose the perfect palette. Our house looks brand new!"</p>
+                        <div class="testimonial-author">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%232E4057'/%3E%3Ctext x='50' y='50' text-anchor='middle' dy='.3em' fill='white' font-size='40'%3ED%3C/text%3E%3C/svg%3E" alt="David Chen" loading="lazy">
+                            <div class="author-info">
+                                <h4>David Chen</h4>
+                                <p>Homeowner, NSW</p>
+                            </div>
+                            <div class="stars" aria-label="5 out of 5 stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Banner -->
+    <section class="features" aria-label="Company features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-award" aria-hidden="true"></i></div>
+                    <h3>Quality Guaranteed</h3>
+                    <p>Premium paints and materials for lasting results</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-clock" aria-hidden="true"></i></div>
+                    <h3>On-Time Delivery</h3>
+                    <p>Projects completed on schedule, every time</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></div>
+                    <h3>Fully Insured</h3>
+                    <p>Complete peace of mind for every project</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-dollar-sign" aria-hidden="true"></i></div>
+                    <h3>Competitive Pricing</h3>
+                    <p>Transparent pricing with no hidden costs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info scroll-reveal-left">
+                    <span class="section-tag">Contact Us</span>
+                    <h2 id="contact-heading">Get Your <span class="highlight">Free Quote</span></h2>
+                    <p>Ready to transform your space? Contact us today for a free, no-obligation quote.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
+                            <div>
+                                <h4>Service Area</h4>
+                                <p>Sydney, NSW - All Metro Areas</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@paintingmaster.com.au</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-clock" aria-hidden="true"></i></div>
+                            <div>
+                                <h4>Business Hours</h4>
+                                <p>Mon - Sat: 7:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links" aria-label="Social media links">
+                        <a href="https://web.facebook.com/p/Painting-Master-100077280320082/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper scroll-reveal-right">
+                    <form class="contact-form" id="contactForm" aria-label="Contact form">
+                        <h3>Request a Quote</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" required placeholder="Your Name" aria-label="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" required placeholder="Email Address" aria-label="Email Address">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" required placeholder="Phone Number" aria-label="Phone Number">
+                            </div>
+                            <div class="form-group">
+                                <select id="service" name="service" required aria-label="Select Service">
+                                    <option value="">Select Service</option>
+                                    <option value="interior">Interior Painting</option>
+                                    <option value="exterior">Exterior Painting</option>
+                                    <option value="commercial">Commercial Painting</option>
+                                    <option value="color">Colour Consultation</option>
+                                    <option value="repairs">Repairs & Touch-up</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..." aria-label="Project details"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">
+                            <span>Send Request</span>
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-about">
+                        <a href="#" class="footer-logo" aria-label="Painting Master Home">
+                            <div class="logo-icon"><i class="fas fa-paint-roller" aria-hidden="true"></i></div>
+                            <span>Painting Master</span>
+                        </a>
+                        <p>Sydney's most trusted professional painting company. Quality craftsmanship that transforms your space.</p>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul role="list">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-services">
+                        <h4>Services</h4>
+                        <ul role="list">
+                            <li><a href="#">Interior Painting</a></li>
+                            <li><a href="#">Exterior Painting</a></li>
+                            <li><a href="#">Commercial Painting</a></li>
+                            <li><a href="#">Colour Consultation</a></li>
+                            <li><a href="#">Repairs & Maintenance</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-contact">
+                        <h4>Contact</h4>
+                        <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Sydney, NSW</p>
+                        <p><i class="fas fa-envelope" aria-hidden="true"></i> info@paintingmaster.com.au</p>
+                        <p><i class="fas fa-clock" aria-hidden="true"></i> Mon - Sat: 7AM - 6PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 Painting Master. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Painting Master",
+        "description": "Professional painting services in Sydney NSW. Residential and commercial painting, colour consultation, and repairs.",
+        "url": "https://paintingmaster.com.au/",
+        "telephone": "",
+        "email": "info@paintingmaster.com.au",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Sydney",
+            "addressRegion": "NSW",
+            "addressCountry": "AU"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-33.9239965",
+            "longitude": "151.0557554"
+        },
+        "openingHours": "Mo-Sa 07:00-18:00",
+        "priceRange": "$$",
+        "areaServed": {
+            "@type": "City",
+            "name": "Sydney"
+        },
+        "serviceType": ["Residential Painting", "Commercial Painting", "Interior Painting", "Exterior Painting", "Colour Consultation"],
+        "sameAs": [
+            "https://web.facebook.com/p/Painting-Master-100077280320082/"
+        ]
+    }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
